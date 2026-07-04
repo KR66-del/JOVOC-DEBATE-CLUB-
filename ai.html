@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Research Assistant | St. Joseph Secondary School Nyamityobora Debate Club</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<img src="assets/images/logo.png" alt="School Logo">
+
+<div>
+
+<h2>St. Joseph SS Nyamityobora</h2>
+
+<p>Debate Club</p>
+
+</div>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="cabinet.html">Cabinet</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="news.html">News</a></li>
+<li><a href="resources.html">Resources</a></li>
+<li><a href="ai.html" class="active">AI Research</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+<div class="menu-btn">
+
+<i class="fas fa-bars"></i>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- PAGE BANNER -->
+
+<section class="page-banner">
+
+<div class="container">
+
+<h1>AI Research Assistant</h1>
+
+<p>Your intelligent debate and learning companion.</p>
+
+</div>
+
+</section>
+
+<!-- INTRO -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Welcome to the AI Assistant</h2>
+
+<p>
+
+The Debate Club AI Assistant helps students research debate motions, prepare speeches, generate poetry ideas, improve public speaking and strengthen critical thinking.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- AI CHAT -->
+
+<section class="ai-preview">
+
+<div class="container">
+
+<h2>Ask the AI</h2>
+
+<p>
+
+Type your question below.
+
+Examples:
+
+• Generate arguments for a debate motion.
+
+• Write a speech.
+
+• Explain a difficult topic.
+
+• Create a poem.
+
+• Help with research.
+
+</p>
+
+<textarea
+id="userQuestion"
+placeholder="Type your question here..."
+style="width:100%;height:180px;"></textarea>
+
+<br><br>
+
+<button class="btn-primary" onclick="askAI()">
+
+<i class="fas fa-robot"></i>
+
+Ask AI
+
+</button>
+
+</div>
+
+</section>
+
+<!-- RESPONSE -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>AI Response</h2>
+
+</div>
+
+<div class="news-card">
+
+<p id="aiResponse">
+
+The AI response will appear here after submitting your question.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="activities">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>What the AI Can Do</h2>
+
+</div>
+
+<div class="activities-grid">
+
+<div class="activity-card">
+
+<h3><i class="fas fa-comments"></i> Debate Arguments</h3>
+
+<p>Create arguments for both Proposition and Opposition.</p>
+
+</div>
+
+<div class="activity-card">
+
+<h3><i class="fas fa-microphone"></i> Speech Writing</h3>
+
+<p>Generate speeches for assemblies and competitions.</p>
+
+</div>
+
+<div class="activity-card">
+
+<h3><i class="fas fa-feather-alt"></i> Poetry</h3>
+
+<p>Create poems and spoken word performances.</p>
+
+</div>
+
+<div class="activity-card">
+
+<h3><i class="fas fa-book-open"></i> Research</h3>
+
+<p>Summarise topics and explain difficult concepts.</p>
+
+</div>
+
+<div class="activity-card">
+
+<h3><i class="fas fa-lightbulb"></i> Critical Thinking</h3>
+
+<p>Improve reasoning and analytical skills.</p>
+
+</div>
+
+<div class="activity-card">
+
+<h3><i class="fas fa-language"></i> Grammar</h3>
+
+<p>Improve English writing and communication skills.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<img src="assets/images/logo.png" width="90">
+
+<h3>St. Joseph Secondary School Nyamityobora Debate Club</h3>
+
+<p>P.O. Box 406, Mbarara, Uganda</p>
+
+<p>Email: st.josephthejust@gmail.com</p>
+
+<p>Phone: 0704050747</p>
+
+<p>WhatsApp: 0764578583</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="copyright">
+
+© 2026 St. Joseph Secondary School Nyamityobora Debate Club. All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+<script>
+
+function askAI(){
+
+const question=document.getElementById("userQuestion").value;
+
+const answer=document.getElementById("aiResponse");
+
+if(question.trim()==""){
+
+answer.innerHTML="Please enter a question.";
+
+return;
+
+}
+
+answer.innerHTML="<strong>Your Question:</strong><br><br>"+question+
+
+"<br><br><strong>Demo Response:</strong><br>This website is ready to connect to the OpenAI API. Once connected, AI will generate intelligent answers here in real time.";
+
+}
+
+</script>
+<script type="module" src="js/firebase.js"></script>
+</body>
+
+</html>
